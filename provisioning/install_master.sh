@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source settings.sh
+source /opt/okd-installation-centos-kapcom/provisioning/settings.sh
 
 envsubst < inventory.download > inventory.ini
 
