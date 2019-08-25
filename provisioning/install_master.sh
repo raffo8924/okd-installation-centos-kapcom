@@ -2,7 +2,7 @@
 
 source /opt/okd-installation-centos-kapcom/provisioning/settings.sh
 
-envsubst < inventory.download > inventory.ini
+envsubst < inventory.download > /opt/okd-installation-centos-kapcom/provisioning/inventory.ini
 
 # install the packages for Ansible
 yum -y --enablerepo=epel install ansible pyOpenSSL
@@ -17,10 +17,10 @@ mkdir -p /etc/origin/master/
 touch /etc/origin/master/htpasswd
 
 # check pre-requisites
-ansible-playbook -i inventory.ini openshift-ansible/playbooks/prerequisites.yml
+ansible-playbook -i /opt/okd-installation-centos-kapcom/provisioning/inventory.ini openshift-ansible/playbooks/prerequisites.yml
 
 # deploy cluster
-ansible-playbook -i inventory.ini openshift-ansible/playbooks/deploy_cluster.yml
+ansible-playbook -i /opt/okd-installation-centos-kapcom/provisioning/inventory.ini openshift-ansible/playbooks/deploy_cluster.yml
 
 htpasswd -b /etc/origin/master/htpasswd $OKD_USERNAME ${OKD_PASSWORD}
 oc adm policy add-cluster-role-to-user cluster-admin $OKD_USERNAME
