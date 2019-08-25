@@ -29,13 +29,13 @@ export OKD_INFRA_NODE_1_HOSTNAME=okd-infra-node-1
 #By default we can login using the URL https://console.okd.nip.io:8443
 #To access URL from your local system we need to configure master host in C:\Windows\System32\drivers\etc\hosts file as below
 #192.168.1.100  console.okd.nip.io
-export DOMAIN=192.168.1.100
+export DOMAIN=kapcomperuokd
 export API_PORT=8443
 
 #OKD Login Credentials
 #By default admin/admin operator will be created and can be used to login to OKD console.
 export OKD_USERNAME=tristan
-export OKD_PASSWORD=k@pc0m.2018
+export OKD_PASSWORD=k4pc0m.2018
 
 #OKD Add-Ons
 #Enable "True"  only if one of the VM has 4GB memory.
