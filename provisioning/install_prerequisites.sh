@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source /root/okd-installation-centos/provisioning/settings.sh
+source /root/okd-installation-centos-kapcom/provisioning/settings.sh
 
 cat >>/etc/hosts<<EOF
 ${OKD_MASTER_IP} ${OKD_MASTER_HOSTNAME} console console.${DOMAIN}
