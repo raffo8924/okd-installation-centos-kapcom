@@ -3,7 +3,7 @@
 source /opt/okd-installation-centos-kapcom/provisioning/settings.sh
 
 cat >>/etc/hosts<<EOF
-${OKD_MASTER_IP} ${OKD_MASTER_HOSTNAME} console console.${DOMAIN} console.apps.${DOMAIN}
+${OKD_MASTER_IP} ${OKD_MASTER_HOSTNAME} console console.${DOMAIN} console.apps.${DOMAIN} hawkular-metrics.apps.${DOMAIN} registry-console-default.apps.${DOMAIN} docker-registry-default.apps.${DOMAIN} 
 ${OKD_WORKER_NODE_1_IP} ${OKD_WORKER_NODE_1_HOSTNAME}
 ${OKD_WORKER_NODE_2_IP} ${OKD_WORKER_NODE_2_HOSTNAME}
 ${OKD_WORKER_NODE_3_IP} ${OKD_WORKER_NODE_3_HOSTNAME}
