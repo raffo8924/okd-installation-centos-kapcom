@@ -40,11 +40,11 @@
 
 *Name*|*IP*|*OS*|*RAM*|*CPU*|
 |----|----|----|----|----|
-*okd-master-node*    |*100.10.10.100*|*CentOS7*|*16GB*|*4*|
-*okd-worker-node-1* |*100.10.10.101*|*CentOS7*|*16GB*|*4*|
-*okd-worker-node-2* |*100.10.10.102*|*CentOS7*|*16GB*|*4*|
-*okd-worker-node-3* |*100.10.10.103*|*CentOS7*|*16GB*|*4*|
-*okd-infra-node-1*     |*100.10.10.104*|*CentOS7*|*16GB*|*4*|
+*okd-master-node*    |*167.50.0.100*|*CentOS7*|*16GB*|*4*|
+*okd-worker-node-1* |*167.50.0.101*|*CentOS7*|*16GB*|*4*|
+*okd-worker-node-2* |*167.50.0.102*|*CentOS7*|*16GB*|*4*|
+*okd-worker-node-3* |*167.50.0.103*|*CentOS7*|*16GB*|*4*|
+*okd-infra-node-1*     |*167.50.0.104*|*CentOS7*|*16GB*|*4*|
 
   
   
@@ -58,11 +58,11 @@
  
 ***Update the system and host names for all nodes***
 
-* `100.10.10.100 (okd-master-node)`
-* `100.10.10.101 (okd-worker-node-1)`
-* `100.10.10.102 (okd-worker-node-2)`
-* `100.10.10.103 (okd-worker-node-3)`
-* `100.10.10.104 (okd-infra-node-1)`
+* `167.50.0.100 (okd-master-node)`
+* `167.50.0.101 (okd-worker-node-1)`
+* `167.50.0.102 (okd-worker-node-2)`
+* `167.50.0.103 (okd-worker-node-3)`
+* `167.50.0.104 (okd-infra-node-1)`
   
 ***Unix Command!!!***
 
@@ -74,11 +74,11 @@
 
   ***Enable SELINUX=enforcing on all master/worker/infra nodes***
   
-* `100.10.10.100 (okd-master-node)`
-* `100.10.10.101 (okd-worker-node-1)`
-* `100.10.10.102 (okd-worker-node-2)`
-* `100.10.10.103 (okd-worker-node-3)`
-* `100.10.10.104 (okd-infra-node-1)`
+* `167.50.0.100 (okd-master-node)`
+* `167.50.0.101 (okd-worker-node-1)`
+* `167.50.0.102 (okd-worker-node-2)`
+* `167.50.0.103 (okd-worker-node-3)`
+* `167.50.0.104 (okd-infra-node-1)`
 
 ***Unix Command!!!***
 
@@ -93,11 +93,11 @@
 
   ***Reboot all master/worker/infra nodes***
  
-* `100.10.10.100 (okd-master-node)`
-* `100.10.10.101 (okd-worker-node-1)`
-* `100.10.10.102 (okd-worker-node-2)`
-* `100.10.10.103 (okd-worker-node-3)`
-* `100.10.10.104 (okd-infra-node-1)`
+* `167.50.0.100 (okd-master-node)`
+* `167.50.0.101 (okd-worker-node-1)`
+* `167.50.0.102 (okd-worker-node-2)`
+* `167.50.0.103 (okd-worker-node-3)`
+* `167.50.0.104 (okd-infra-node-1)`
  
 ***Unix Command!!!***
 
@@ -115,11 +115,11 @@
 ***Copy "okd-installation-centos" folder to all master/worker nodes***
 
   
-* `100.10.10.100 (okd-master-node)`
-* `100.10.10.101 (okd-worker-node-1)`
-* `100.10.10.102 (okd-worker-node-2)`
-* `100.10.10.103 (okd-worker-node-3)`
-* `100.10.10.104 (okd-infra-node-1)`
+* `167.50.0.100 (okd-master-node)`
+* `167.50.0.101 (okd-worker-node-1)`
+* `167.50.0.102 (okd-worker-node-2)`
+* `167.50.0.103 (okd-worker-node-3)`
+* `167.50.0.104 (okd-infra-node-1)`
 
 *Example copy to root folder and execution permissions can be applied by executing the below command.*
  
@@ -133,11 +133,11 @@
 
 ***Execute the below script on all master/worker/infra nodes***
 
-* `100.10.10.100 (okd-master-node)`
-* `100.10.10.101 (okd-worker-node-1)`
-* `100.10.10.102 (okd-worker-node-2)`
-* `100.10.10.103 (okd-worker-node-3)`
-* `100.10.10.104 (okd-infra-node-1)`
+* `167.50.0.100 (okd-master-node)`
+* `167.50.0.101 (okd-worker-node-1)`
+* `167.50.0.102 (okd-worker-node-2)`
+* `167.50.0.103 (okd-worker-node-3)`
+* `167.50.0.104 (okd-infra-node-1)`
 
 ***Unix Command!!!***
 
@@ -148,7 +148,7 @@
 
 ***Enable SSH to communicate all the other "worker/infra nodes" from "master" with out "password". All the below commands needs to be executed on "master" node only***
 
-* `100.10.10.101 (okd-master-node)`
+* `167.50.0.101 (okd-master-node)`
   
 ***Unix Command!!!***
 
@@ -156,29 +156,29 @@
 
 ***okd-master-node***
 
-`$ cat ~/.ssh/id_rsa.pub | ssh   root@100.10.10.100  "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"`
+`$ cat ~/.ssh/id_rsa.pub | ssh   root@167.50.0.100  "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"`
 
 ***okd-worker-node-1***
 
-`$ cat ~/.ssh/id_rsa.pub | ssh   root@100.10.10.101  "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"`
+`$ cat ~/.ssh/id_rsa.pub | ssh   root@167.50.0.101  "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"`
 
 ***okd-worker-node-2***
 
-`$ cat ~/.ssh/id_rsa.pub | ssh   root@100.10.10.102  "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"`
+`$ cat ~/.ssh/id_rsa.pub | ssh   root@167.50.0.102  "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"`
 
 ***okd-worker-node-3***
 
-`$ cat ~/.ssh/id_rsa.pub | ssh   root@100.10.10.103  "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"`
+`$ cat ~/.ssh/id_rsa.pub | ssh   root@167.50.0.103  "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"`
 
 ***okd-infra-node-4***
 
-`$ cat ~/.ssh/id_rsa.pub | ssh   root@100.10.10.104  "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"`
+`$ cat ~/.ssh/id_rsa.pub | ssh   root@167.50.0.104  "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"`
 
 ## ***Step 8***
 
 ***Execute the below script only on master node***
 
-* `100.10.10.101 (okd-master-node)`
+* `167.50.0.101 (okd-master-node)`
   
 ***Unix Command!!!***
 
