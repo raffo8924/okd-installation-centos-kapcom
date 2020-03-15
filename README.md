@@ -170,7 +170,7 @@
 
 `$ cat ~/.ssh/id_rsa.pub | ssh   root@167.50.0.103  "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"`
 
-***okd-infra-node-4***
+***okd-infra-node-1***
 
 `$ cat ~/.ssh/id_rsa.pub | ssh   root@167.50.0.104  "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"`
 
