@@ -42,4 +42,4 @@ export OKD_PASSWORD=k4pc0m.2018
 export INSTALL_METRICS=True
 
 # Enable "True"  only one of the VM 16GB memory.
-export INSTALL_LOGGING=False
+export INSTALL_LOGGING=True
