@@ -39,7 +39,7 @@ export OKD_PASSWORD=k4pc0m.2018
 
 #OKD Add-Ons
 #Enable "True"  only if one of the VM has 4GB memory.
-export INSTALL_METRICS=False
+export INSTALL_METRICS=True
 
 # Enable "True"  only one of the VM 16GB memory.
 export INSTALL_LOGGING=False
